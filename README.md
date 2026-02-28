@@ -2,15 +2,15 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# PEEDIKA 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: LLL
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: LIYANA SHIRIN A A- LBSITW TRIVANDRUM
+- Member 2: LAKSHMI SANKAR M P - LBSITW TRIVANDRUM
 
 ### Hosted Project Link
 [mention your project hosted link here]
