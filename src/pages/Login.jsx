@@ -14,47 +14,77 @@ function Login() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const API = "https://peedika-1.onrender.com";
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (isLogin) {
-      // LOGIN
-      if (!email || !password) {
-        alert("Please fill all fields");
-        return;
+    try {
+      if (isLogin) {
+        // LOGIN
+        if (!email || !password) {
+          alert("Please fill all fields");
+          return;
+        }
+
+        const res = await fetch(`${API}/login`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          alert(data.message || "Login failed");
+          return;
+        }
+
+        // Store token
+        localStorage.setItem("token", data.token);
+
+        alert("Login successful!");
+        navigate("/");
+      } else {
+        // REGISTER
+        if (!name || !email || !password) {
+          alert("Please fill required fields");
+          return;
+        }
+
+        const res = await fetch(`${API}/register`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            password,
+          }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          alert(data.message || "Signup failed");
+          return;
+        }
+
+        alert("Signup successful! Please login.");
+        setIsLogin(true);
       }
-
-      if (password !== "1234") {
-        alert("Invalid password. Use 1234");
-        return;
-      }
-
-      navigate("/");
-    } else {
-      // SIGN UP
-      if (!name || !place || !phone || !email || !password) {
-        alert("Please fill all fields");
-        return;
-      }
-
-      console.log("Signup Data:", {
-        name,
-        place,
-        phone,
-        email,
-        password,
-      });
-
-      alert("Signup successful (temporary)");
-
-      setIsLogin(true);
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Try again.");
     }
   };
 
   return (
     <div className="login-container">
       <div className="overlay">
-
         {/* LEFT BRANDING */}
         <div className="brand-section">
           <h1 className="brand-title">PEEDIKA</h1>
@@ -121,7 +151,6 @@ function Login() {
               : "Already have an account? Log In"}
           </p>
         </div>
-
       </div>
     </div>
   );
