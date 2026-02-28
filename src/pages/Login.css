@@ -1,0 +1,88 @@
+.login-container {
+  height: 100vh;
+  background: url("/library.jpg") no-repeat center center/cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
+/* LEFT SIDE BRANDING */
+.brand-section {
+  color: #f3d5b5;
+  max-width:600px;
+}
+
+.brand-title {
+  font-size: 80px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.brand-subtitle {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* RIGHT SIDE CARD */
+.glass-card {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 600px;
+  border: 1px solid rgba(255, 215, 160, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.glass-card h2 {
+  color: #f3d5b5;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.glass-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.glass-card input::placeholder {
+  color: #ddd;
+}
+
+.glass-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #d4a373;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.glass-card button:hover {
+  background: #e6b98a;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 15px;
+  color: #f3d5b5;
+  cursor: pointer;
+}

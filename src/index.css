@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F5F1E8;
+}
+
+#root {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Hide horizontal scrollbar but allow scroll */
+.genreBar::-webkit-scrollbar {
+  display: none;
+}
+
+.genreBar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
