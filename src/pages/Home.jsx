@@ -179,7 +179,7 @@ const styles = {
 },
 };
 
-function Home({ books, setBooks }) {
+  {
 
   function getBooks() {
 
