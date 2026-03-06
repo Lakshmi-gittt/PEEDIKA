@@ -225,6 +225,9 @@ function Home({ books, setBooks }) {
       <button onClick={getBooks}>
         Find Nearby Books
       </button>
+      <body>
+      <div id="root"></div>
+      </body>
 
       {books.map((book, index) => {
 
