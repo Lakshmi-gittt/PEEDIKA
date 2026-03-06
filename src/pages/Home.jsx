@@ -58,8 +58,7 @@ function Home({ books, setBooks }) {
           </button>
         ))}
       </div>
-
-      {/* HERO */}
+    {/* HERO */}
       <section style={styles.hero}>
         <div style={styles.heroText}>
           <h1 style={styles.heroTitle}>
@@ -103,5 +102,69 @@ function Home({ books, setBooks }) {
     </div>
   );
 }
+const styles = {
+  hero: {
+    width: "100%",
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "100px 10%",
+    background: "linear-gradient(to right, #1a1a1a, #122a2c)",
+    color: "#f3d5b5",
+  },
 
+  heroText: { flex: 1 },
+
+  heroTitle: {
+    fontSize: "48px",
+    fontWeight: "700",
+    marginBottom: "25px",
+    color: "#f3d5b5",
+  },
+
+  heroSubtitle: {
+    fontSize: "18px",
+    marginBottom: "30px",
+    color: "#d6c1a4",
+  },
+
+  heroBtn: {
+    padding: "14px 28px",
+    backgroundColor: "#8B4513",
+    color: "white",
+    border: "none",
+    borderRadius: "10px",
+    cursor: "pointer",
+  },
+
+  heroImageBox: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "center",
+  },
+
+  heroImage: {
+    width: "420px",
+    borderRadius: "16px",
+  },
+
+  bookSection: {
+    width: "100%",
+    padding: "80px 10%",
+    backgroundColor: "#121212",
+  },
+
+  sectionTitle: {
+    fontSize: "32px",
+    marginBottom: "40px",
+    color: "#f3d5b5",
+  },
+
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(200px,1fr))",
+    gap: "20px",
+  },
+};
 export default Home;
